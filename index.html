@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>D.R.S. Disaster Services Central Maine</title>
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+color: #e0e0e0;
+line-height: 1.6;
+}
+
+header {
+background: rgba(0, 0, 0, 0.5);
+backdrop-filter: blur(10px);
+padding: 1.5rem 5%;
+position: sticky;
+top: 0;
+z-index: 100;
+border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+.logo {
+font-size: 1.8rem;
+font-weight: bold;
+color: #ff6b35;
+text-shadow: 0 0 10px rgba(255, 107, 53, 0.3);
+}
+
+.nav-links {
+display: flex;
+gap: 2rem;
+list-style: none;
+}
+
+.nav-links a {
+color: #e0e0e0;
+text-decoration: none;
+transition: color 0.3s;
+font-weight: 500;
+}
+
+.nav-links a:hover {
+color: #ff6b35;
+}
+
+.hero {
+text-align: center;
+padding: 6rem 5% 4rem;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+.hero h1 {
+font-size: 3.5rem;
+margin-bottom: 1rem;
+color: #ffffff;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+font-size: 1.3rem;
+margin-bottom: 2rem;
+color: #b0b0b0;
+}
+
+.cta-button {
+display: inline-block;
+padding: 1rem 2.5rem;
+background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+color: white;
+text-decoration: none;
+border-radius: 50px;
+font-weight: bold;
+font-size: 1.1rem;
+transition: transform 0.3s, box-shadow 0.3s;
+box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+}
+
+.cta-button:hover {
+transform: translateY(-2px);
+box-shadow: 0 6px 20px rgba(255, 107, 53, 0.6);
+}
+
+.services {
+padding: 4rem 5%;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+.services h2 {
+text-align: center;
+font-size: 2.5rem;
+margin-bottom: 3rem;
+color: #ffffff;
+}
+
+.service-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 2rem;
+}
+
+.service-card {
+background: rgba(255, 255, 255, 0.05);
+backdrop-filter: blur(10px);
+padding: 2rem;
+border-radius: 15px;
+border: 1px solid rgba(255, 255, 255, 0.1);
+transition: transform 0.3s, border-color 0.3s;
+}
+
+.service-card:hover {
+transform: translateY(-5px);
+border-color: #ff6b35;
+}
+
+.service-icon {
+font-size: 3rem;
+margin-bottom: 1rem;
+}
+
+.service-card h3 {
+font-size: 1.5rem;
+margin-bottom: 1rem;
+color: #ff6b35;
+}
+
+.service-card p {
+color: #b0b0b0;
+}
+
+.emergency {
+background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(247, 147, 30, 0.1) 100%);
+padding: 3rem 5%;
+text-align: center;
+margin: 4rem 0;
+border-top: 1px solid rgba(255, 107, 53, 0.3);
+border-bottom: 1px solid rgba(255, 107, 53, 0.3);
+}
+
+.emergency h2 {
+font-size: 2rem;
+margin-bottom: 1rem;
+color: #ffffff;
+}
+
+.emergency-phone {
+font-size: 2.5rem;
+color: #ff6b35;
+font-weight: bold;
+margin: 1rem 0;
+text-shadow: 0 0 10px rgba(255, 107, 53, 0.3);
+}
+
+.why-choose {
+padding: 4rem 5%;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+.why-choose h2 {
+text-align: center;
+font-size: 2.5rem;
+margin-bottom: 3rem;
+color: #ffffff;
+}
+
+.features {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 2rem;
+}
+
+.feature {
+text-align: center;
+padding: 1.5rem;
+}
+
+.feature-icon {
+font-size: 2.5rem;
+margin-bottom: 1rem;
+}
+
+.feature h3 {
+margin-bottom: 0.5rem;
+color: #ffffff;
+}
+
+footer {
+background: rgba(0, 0, 0, 0.5);
+padding: 2rem 5%;
+text-align: center;
+margin-top: 4rem;
+border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer p {
+color: #808080;
+}
+
+@media (max-width: 768px) {
+.hero h1 {
+font-size: 2.5rem;
+}
+
+.nav-links {
+gap: 1rem;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.service-grid, .features {
+grid-template-columns: 1fr;
+}
+}
+</style>
+
+</head>
+<body>
+<header>
+<nav>
+<div class="logo">D.R.S. Disaster Services</div>
+<ul class="nav-links">
+<li><a href="#services">Services</a></li>
+<li><a href="#emergency">Emergency</a></li>
+<li><a href="#why-us">Why Us</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero">
+<h1>Fast, Professional Disaster Restoration</h1>
+<p>Expert flood and fire mitigation services available 24/7</p>
+<a href="#emergency" class="cta-button">Get Emergency Help Now</a>
+</section>
+
+<section class="services" id="services">
+<h2>Our Services</h2>
+<div class="service-grid">
+<div class="service-card">
+<div class="service-icon">💧</div>
+<h3>Water Damage Restoration</h3>
+<p>Complete flood cleanup, water extraction, drying, and restoration services to prevent mold and structural damage.</p>
+</div>
+<div class="service-card">
+<div class="service-icon">🔥</div>
+<h3>Fire Damage Restoration</h3>
+<p>Comprehensive fire and smoke damage cleanup, odor removal, and complete property restoration.</p>
+</div>
+<div class="service-card">
+<div class="service-icon">🦠</div>
+<h3>Mold Remediation</h3>
+<p>Professional mold inspection, removal, and prevention to keep your property safe and healthy.</p>
+</div>
+<div class="service-card">
+<div class="service-icon">🌪️</div>
+<h3>Storm Damage Repair</h3>
+<p>Emergency response for storm-related damage including roof leaks, flooding, and structural issues.</p>
+</div>
+<div class="service-card">
+<div class="service-icon">🧹</div>
+<h3>Deep Cleaning & Sanitization</h3>
+<p>Thorough cleaning and sanitization services to restore your property to pre-disaster condition.</p>
+</div>
+<div class="service-card">
+<div class="service-icon">📋</div>
+<h3>Insurance Assistance</h3>
+<p>We work directly with your insurance company to streamline the claims process and documentation.</p>
+</div>
+</div>
+</section>
+
+<section class="emergency" id="emergency">
+<h2>🚨 24/7 Emergency Response</h2>
+<p>Disasters don't wait. Neither do we.</p>
+<div class="emergency-phone">1-800-RESTORE</div>
+<p>Available around the clock for immediate assistance</p>
+</section>
+
+<section class="why-choose" id="why-us">
+<h2>Why Choose D.R.S. Disaster Services?</h2>
+<div class="features">
+<div class="feature">
+<div class="feature-icon">⚡</div>
+<h3>Rapid Response</h3>
+<p>On-site within 60 minutes of your call</p>
+</div>
+<div class="feature">
+<div class="feature-icon">✅</div>
+<h3>Certified Experts</h3>
+<p>Licensed and insured professionals</p>
+</div>
+<div class="feature">
+<div class="feature-icon">🛠️</div>
+<h3>Advanced Equipment</h3>
+<p>State-of-the-art restoration technology</p>
+</div>
+<div class="feature">
+<div class="feature-icon">💯</div>
+<h3>100% Satisfaction</h3>
+<p>Guaranteed quality workmanship</p>
+</div>
+</div>
+</section>
+
+<footer id="contact">
+<p>&copy; 2025 D.R.S. Disaster Services Central Maine. All rights reserved.</p>
+<p>Serving Central Maine 24/7 | Licensed • Bonded • Insured</p>
+</footer>
+
+</body>
+</html>
