@@ -1,7 +1,4 @@
-
-
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -50,8 +47,9 @@ text-shadow: 0 0 10px rgba(255, 107, 53, 0.3);
 }
 
 .logo img {
-height: 50px;
+height: 60px;
 width: auto;
+filter: drop-shadow(0 0 10px rgba(255, 107, 53, 0.3));
 }
 
 .nav-links {
@@ -332,6 +330,14 @@ flex-wrap: wrap;
 justify-content: center;
 }
 
+.logo {
+font-size: 1.4rem;
+}
+
+.logo img {
+height: 45px;
+}
+
 .service-grid, .features, .gallery-grid, .cert-grid {
 grid-template-columns: 1fr;
 }
@@ -342,7 +348,10 @@ grid-template-columns: 1fr;
 <body>
 <header>
 <nav>
-<div class="logo">D.R.S. Disaster Services</div>
+<div class="logo">
+<img src="logo.png" alt="D.R.S. Logo">
+D.R.S. Disaster Services
+</div>
 <ul class="nav-links">
 <li><a href="#services">Services</a></li>
 <li><a href="#gallery">Gallery</a></li>
@@ -488,4 +497,3 @@ grid-template-columns: 1fr;
 
 </body>
 </html>
-
